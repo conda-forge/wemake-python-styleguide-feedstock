@@ -1,3 +1,4 @@
+{% set python_min = '3.9.0' %}
 {% set name = "wemake-python-styleguide" %}
 {% set version = "0.19.2" %}
 
@@ -6,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wemake_python_styleguide-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wemake_python_styleguide-{{ version }}.tar.gz
   sha256: 850fe70e6d525fd37ac51778e552a121a489f1bd057184de96ffd74a09aef414
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.9.0
     - pip
   run:
-    - python >=3.9.0,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - flake8 >=7.0.0,<8.0.0
     - attrs
     - setuptools
@@ -49,6 +50,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://wemake-python-styleguide.rtfd.io
