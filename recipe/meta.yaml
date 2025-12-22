@@ -1,5 +1,5 @@
 {% set name = "wemake-python-styleguide" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wemake_python_styleguide-{{ version }}.tar.gz
-  sha256: 0964cf40ac4d3f1c89dd79aee4b6edba9a1806fb395836c73e746fe287dbae3e
+  sha256: a764b30bd298ecd3ca9d5cd64b7776dec9a529d728291e8b8076a56649d6cce1
 
 build:
   noarch: python
