@@ -1,13 +1,13 @@
 {% set name = "wemake-python-styleguide" %}
-{% set version = "1.7.1" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wemake_python_styleguide-{{ version }}.tar.gz
-  sha256: 4703dc96864e324d83308f77bcd921446cba3c160bc2782d413d8a7205072107
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/wemake_python_styleguide-{{ version }}.tar.gz
+  sha256: fa71e7e202d1d913eedc36290160c196bdf815ab5694d202a181be3d1a9dcf9e
 
 build:
   noarch: python
